@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="2dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="230dp"
+        android:layout_margin="5dp"
+        android:id="@+id/bs_img"
+        android:src="@drawable/cardbackground"/>
+    <TextView
+        android:id="@+id/bs_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="170dp"
+        android:text="@string/bestsell_card"
+        android:textSize="13sp" />
+    <TextView
+        android:id="@+id/bs_rarity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/common"
+        android:textSize="14sp" />
+    <TextView
+        android:id="@+id/bs_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bestsell_price"
+        android:textSize="14sp" />
+</LinearLayout>
