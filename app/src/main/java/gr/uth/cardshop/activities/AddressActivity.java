@@ -1,4 +1,4 @@
-package gr.uth.cardshop;
+package gr.uth.cardshop.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,6 +22,8 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+
+import gr.uth.cardshop.R;
 import gr.uth.cardshop.adapter.AddressAdapter;
 import gr.uth.cardshop.domain.Address;
 import gr.uth.cardshop.domain.Items;

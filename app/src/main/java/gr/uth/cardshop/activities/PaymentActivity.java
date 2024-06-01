@@ -1,4 +1,4 @@
-package gr.uth.cardshop;
+package gr.uth.cardshop.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,11 +8,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.appbar.MaterialToolbar;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.FirebaseFirestore;
+
 import java.io.Serializable;
 import java.util.ArrayList;
-import gr.uth.cardshop.adapter.PaymentRecyclerAdapter;
+
+import gr.uth.cardshop.R;
+import gr.uth.cardshop.adapter.PaymentAdapter;
 import gr.uth.cardshop.domain.Items;
 
 public class PaymentActivity extends AppCompatActivity {
@@ -29,7 +30,7 @@ public class PaymentActivity extends AppCompatActivity {
     private double total_amount = 0.0;
     private MaterialToolbar mToolbar;
     private RecyclerView paymentRecyclerView;
-    private PaymentRecyclerAdapter paymentRecyclerAdapter;
+    private PaymentAdapter paymentAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,8 +55,8 @@ public class PaymentActivity extends AppCompatActivity {
         paymentRecyclerView = findViewById(R.id.payment_item_container);
         paymentRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         paymentRecyclerView.setHasFixedSize(true);
-        paymentRecyclerAdapter = new PaymentRecyclerAdapter(itemsList);
-        paymentRecyclerView.setAdapter(paymentRecyclerAdapter);
+        paymentAdapter = new PaymentAdapter(itemsList);
+        paymentRecyclerView.setAdapter(paymentAdapter);
 
         if(itemsList != null && itemsList.size()>0) {
             amount = 0.0;

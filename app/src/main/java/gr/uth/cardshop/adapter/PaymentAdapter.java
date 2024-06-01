@@ -15,12 +15,12 @@ import gr.uth.cardshop.R;
 import gr.uth.cardshop.domain.Items;
 
 
-public class PaymentRecyclerAdapter extends RecyclerView.Adapter<PaymentRecyclerAdapter.ViewHolder> {
+public class PaymentAdapter extends RecyclerView.Adapter<PaymentAdapter.ViewHolder> {
     FirebaseFirestore firebaseFirestore;
     private FirebaseAuth firebaseAuth;
     private List<Items> itemsList;
 
-    public PaymentRecyclerAdapter(List<Items> itemsList) {
+    public PaymentAdapter(List<Items> itemsList) {
         this.itemsList = itemsList;
         firebaseFirestore = FirebaseFirestore.getInstance();
         firebaseAuth = firebaseAuth.getInstance();

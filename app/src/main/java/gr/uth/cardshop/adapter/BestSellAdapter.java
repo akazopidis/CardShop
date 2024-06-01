@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import java.util.List;
 
-import gr.uth.cardshop.DetailActivity;
+import gr.uth.cardshop.activities.DetailActivity;
 import gr.uth.cardshop.R;
 import gr.uth.cardshop.domain.BestSell;
 

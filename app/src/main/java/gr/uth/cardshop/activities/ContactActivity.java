@@ -1,4 +1,4 @@
-package gr.uth.cardshop;
+package gr.uth.cardshop.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +13,8 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.appbar.MaterialToolbar;
+
+import gr.uth.cardshop.R;
 
 public class ContactActivity extends AppCompatActivity implements OnMapReadyCallback {
     private GoogleMap gMap;

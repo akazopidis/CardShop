@@ -1,4 +1,4 @@
-package gr.uth.cardshop;
+package gr.uth.cardshop.activities;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -7,7 +7,6 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +22,9 @@ import com.google.android.material.appbar.MaterialToolbar;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import gr.uth.cardshop.R;
+import gr.uth.cardshop.forms.ValidationForm;
+
 public class LoginActivity extends AppCompatActivity {
     private EditText mEmail;
     private EditText mPassword;
@@ -30,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button  mLoginBtn;
     private FirebaseAuth mAuth;
     private MaterialToolbar mToolbar;
-    LoadingDialog loadingDialog = new LoadingDialog(LoginActivity.this);
+    LoadingDialogActivity loadingDialog = new LoadingDialogActivity(LoginActivity.this);
     ValidationForm vf = new ValidationForm();
 
     @Override

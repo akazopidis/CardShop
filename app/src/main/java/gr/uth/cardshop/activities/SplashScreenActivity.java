@@ -1,9 +1,11 @@
-package gr.uth.cardshop;
+package gr.uth.cardshop.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import gr.uth.cardshop.R;
 
 public class SplashScreenActivity extends AppCompatActivity {
     private static int LIMIT=2000;

@@ -18,7 +18,7 @@
         android:theme="@style/Theme.CardShop"
         tools:targetApi="31">
         <activity
-            android:name=".ConfirmationActivity"
+            android:name=".activities.ConfirmationActivity"
             android:exported="false"
             android:noHistory="true">
             <meta-data
@@ -26,128 +26,128 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".WishlistActivity"
+            android:name=".activities.WishlistActivity"
             android:exported="false"
-            android:parentActivityName=".HomeActivity">
+            android:parentActivityName=".activities.HomeActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ContactActivity"
+            android:name=".activities.ContactActivity"
             android:exported="false"
-            android:parentActivityName=".HomeActivity">
+            android:parentActivityName=".activities.HomeActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".OrderHistoryActivity"
+            android:name=".activities.OrderHistoryActivity"
             android:exported="false"
-            android:parentActivityName=".HomeActivity">
+            android:parentActivityName=".activities.HomeActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".EditProfileActivity"
+            android:name=".activities.EditProfileActivity"
             android:exported="false"
-            android:parentActivityName=".UsersProfileActivity">
+            android:parentActivityName=".activities.UsersProfileActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".UsersProfileActivity"
+            android:name=".activities.UsersProfileActivity"
             android:exported="false"
-            android:parentActivityName=".HomeActivity">
+            android:parentActivityName=".activities.HomeActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".CartActivity"
+            android:name=".activities.CartActivity"
             android:exported="false"
-            android:parentActivityName=".HomeActivity">
+            android:parentActivityName=".activities.HomeActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ItemsActivity"
+            android:name=".activities.ItemsActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".CheckoutActivity"
+            android:name=".activities.CheckoutActivity"
             android:exported="false"
             android:screenOrientation="portrait"
-            android:parentActivityName=".PaymentActivity">
+            android:parentActivityName=".activities.PaymentActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".PaymentActivity"
+            android:name=".activities.PaymentActivity"
             android:exported="false"
-            android:parentActivityName=".CartActivity">
+            android:parentActivityName=".activities.CartActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".AddAddressActivity"
+            android:name=".activities.AddAddressActivity"
             android:exported="false"
-            android:parentActivityName=".CartActivity">
+            android:parentActivityName=".activities.CartActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".AddressActivity"
+            android:name=".activities.AddressActivity"
             android:exported="false"
-            android:parentActivityName=".CartActivity">
+            android:parentActivityName=".activities.CartActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".DetailActivity"
+            android:name=".activities.DetailActivity"
             android:exported="false"
-            android:parentActivityName=".HomeActivity">
+            android:parentActivityName=".activities.HomeActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".HomeActivity"
+            android:name=".activities.HomeActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".RegisterActivity"
+            android:name=".activities.RegisterActivity"
             android:exported="false"
             android:noHistory="true"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".activities.MainActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".activities.LoginActivity"
             android:exported="false"
             android:noHistory="true"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".activities.MainActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".SplashScreenActivity"
+            android:name=".activities.SplashScreenActivity"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
@@ -160,7 +160,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -170,7 +170,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="Enter your own Google Maps API Key" />
+            android:value="AIzaSyC7NQs4kq32ejNIoOHJJVxQb5NsEhxYz-4" />
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

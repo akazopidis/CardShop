@@ -15,12 +15,12 @@ import gr.uth.cardshop.R;
 import gr.uth.cardshop.domain.Orders;
 
 
-public class OrdersHistoryRecyclerAdapter extends RecyclerView.Adapter<OrdersHistoryRecyclerAdapter.ViewHolder> {
+public class OrdersHistoryAdapter extends RecyclerView.Adapter<OrdersHistoryAdapter.ViewHolder> {
     FirebaseFirestore firebaseFirestore;
     private FirebaseAuth firebaseAuth;
     private List<Orders> ordersList;
 
-    public OrdersHistoryRecyclerAdapter(List<Orders> ordersList) {
+    public OrdersHistoryAdapter(List<Orders> ordersList) {
         this.ordersList = ordersList;
         firebaseFirestore = FirebaseFirestore.getInstance();
         firebaseAuth = firebaseAuth.getInstance();

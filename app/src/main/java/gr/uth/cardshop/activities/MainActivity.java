@@ -1,4 +1,4 @@
-package gr.uth.cardshop;
+package gr.uth.cardshop.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.google.firebase.auth.FirebaseAuth;
+
+import gr.uth.cardshop.R;
 
 public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;

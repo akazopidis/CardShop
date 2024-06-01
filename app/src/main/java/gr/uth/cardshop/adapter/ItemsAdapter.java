@@ -13,16 +13,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import java.util.List;
 
-import gr.uth.cardshop.DetailActivity;
-import gr.uth.cardshop.HomeActivity;
+import gr.uth.cardshop.activities.DetailActivity;
+import gr.uth.cardshop.activities.HomeActivity;
 import gr.uth.cardshop.R;
 import gr.uth.cardshop.domain.Items;
 
-public class ItemsRecyclerAdapter extends RecyclerView.Adapter<ItemsRecyclerAdapter.ViewHolder> {
+public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> {
     private Context applicationContext;
     private List<Items> mItemsList;
 
-    public ItemsRecyclerAdapter(Context applicationContext, List<Items> mItemsList) {
+    public ItemsAdapter(Context applicationContext, List<Items> mItemsList) {
         this.applicationContext = applicationContext;
         this.mItemsList = mItemsList;
     }

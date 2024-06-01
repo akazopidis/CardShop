@@ -3,6 +3,8 @@ package gr.uth.cardshop;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+import gr.uth.cardshop.forms.ValidationForm;
+
 public class ValidationFormUnitTest {
 
     @Test

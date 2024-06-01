@@ -1,4 +1,4 @@
-package gr.uth.cardshop;
+package gr.uth.cardshop.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
@@ -13,14 +13,16 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.ArrayList;
 import java.util.List;
-import gr.uth.cardshop.adapter.ItemsRecyclerAdapter;
+
+import gr.uth.cardshop.R;
+import gr.uth.cardshop.adapter.ItemsAdapter;
 import gr.uth.cardshop.domain.Items;
 
 public class ItemsActivity extends AppCompatActivity {
     private FirebaseFirestore mStore;
     private List<Items> mItemsList;
     private RecyclerView itemRecyclerView;
-    private ItemsRecyclerAdapter itemsRecyclerAdapter;
+    private ItemsAdapter itemsRecyclerAdapter;
     private MaterialToolbar mToolbar;
 
     @Override
@@ -35,7 +37,7 @@ public class ItemsActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Items");
         itemRecyclerView = findViewById(R.id.items_recycler);
         itemRecyclerView.setLayoutManager(new GridLayoutManager(this,2));
-        itemsRecyclerAdapter = new ItemsRecyclerAdapter(this,mItemsList);
+        itemsRecyclerAdapter = new ItemsAdapter(this,mItemsList);
         itemRecyclerView.setAdapter(itemsRecyclerAdapter);
 
         if(type==null || type.isEmpty()) {

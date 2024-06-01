@@ -1,4 +1,4 @@
-package gr.uth.cardshop;
+package gr.uth.cardshop.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -24,6 +24,7 @@ import com.google.firebase.firestore.SetOptions;
 import java.util.HashMap;
 import java.util.Map;
 
+import gr.uth.cardshop.R;
 import gr.uth.cardshop.domain.BestSell;
 import gr.uth.cardshop.domain.Feature;
 import gr.uth.cardshop.domain.Items;

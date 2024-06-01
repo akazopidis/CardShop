@@ -1,14 +1,16 @@
-package gr.uth.cardshop;
+package gr.uth.cardshop.activities;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.view.LayoutInflater;
 
-public class LoadingDialog {
+import gr.uth.cardshop.R;
+
+public class LoadingDialogActivity {
     private Activity activity;
     private AlertDialog dialog;
 
-    LoadingDialog(Activity myActivity){
+    LoadingDialogActivity(Activity myActivity){
         activity = myActivity;
     }
     void startLoadingDialog(){

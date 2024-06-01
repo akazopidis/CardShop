@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OrderHistoryActivity">
+    tools:context=".activities.OrderHistoryActivity">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/order_history_toolbar"

@@ -1,4 +1,4 @@
-package gr.uth.cardshop;
+package gr.uth.cardshop.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,61 +17,57 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
-import gr.uth.cardshop.adapter.WishlistAdapter;
-import gr.uth.cardshop.domain.Items;
 
-public class WishlistActivity extends AppCompatActivity implements WishlistAdapter.ItemRemoved{
+import gr.uth.cardshop.R;
+import gr.uth.cardshop.adapter.OrdersHistoryAdapter;
+import gr.uth.cardshop.domain.Orders;
+
+public class OrderHistoryActivity extends AppCompatActivity {
     private FirebaseFirestore mStore;
     private FirebaseAuth mAuth;
-    private RecyclerView wishlistRecyclerView;
-    private WishlistAdapter wishlistAdapter;
-    private List<Items> itemsList;
+    private RecyclerView orderRecyclerView;
+    private OrdersHistoryAdapter ordersHistoryAdapter;
+    private List<Orders> ordersList;
     private MaterialToolbar mToolbar;
     private TextView emptyMsg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_wishlist);
+        setContentView(R.layout.activity_order_history);
         mStore = FirebaseFirestore.getInstance();
         mAuth = FirebaseAuth.getInstance();
-        itemsList = new ArrayList<>();
-        emptyMsg = findViewById(R.id.empty_msg_wishlist);
-        wishlistRecyclerView = findViewById(R.id.wishlist_item_container);
-        mToolbar=findViewById(R.id.wishlist_toolbar);
+        emptyMsg = findViewById(R.id.empty_msg_orders);
+        ordersList = new ArrayList<>();
+        orderRecyclerView = findViewById(R.id.order_history_container);
+        mToolbar=findViewById(R.id.order_history_toolbar);
         setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle("Wishlist");
+        getSupportActionBar().setTitle("Orders History");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        wishlistRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        wishlistRecyclerView.setHasFixedSize(true);
-        wishlistAdapter = new WishlistAdapter(itemsList,this);
-        wishlistRecyclerView.setAdapter(wishlistAdapter);
+        orderRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        orderRecyclerView.setHasFixedSize(true);
+        ordersHistoryAdapter = new OrdersHistoryAdapter(ordersList);
+        orderRecyclerView.setAdapter(ordersHistoryAdapter);
 
         mStore.collection("Users").document(mAuth.getCurrentUser().getUid())
-                .collection("Wishlist").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                .collection("Orders").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if(task.isSuccessful()) {
                             if (task.getResult() != null) {
                                 for(DocumentChange doc :task.getResult().getDocumentChanges()) {
-                                    String documentId = doc.getDocument().getId();
-                                    Items item = doc.getDocument().toObject(Items.class);
-                                    item.setDocId(documentId);
-                                    itemsList.add(item);
+                                    Orders order = doc.getDocument().toObject(Orders.class);
+                                    ordersList.add(order);
                                 }
-                                wishlistAdapter.notifyDataSetChanged();
-                                if(itemsList.isEmpty()){
+                                ordersHistoryAdapter.notifyDataSetChanged();
+                                if(ordersList.isEmpty()){
                                     emptyMsg.setVisibility(View.VISIBLE);
                                 }
                             }
                         } else {
-                            Toast.makeText(WishlistActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(OrderHistoryActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
-    }
-
-    @Override
-    public void onItemRemoved(List<Items> itemsList) {
     }
 }

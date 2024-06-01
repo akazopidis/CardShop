@@ -1,4 +1,4 @@
-package gr.uth.cardshop;
+package gr.uth.cardshop.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +17,9 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
+
+import gr.uth.cardshop.R;
+import gr.uth.cardshop.forms.ValidationForm;
 
 public class AddAddressActivity extends AppCompatActivity {
     private EditText mCountry;

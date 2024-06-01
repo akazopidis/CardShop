@@ -1,4 +1,4 @@
-package gr.uth.cardshop;
+package gr.uth.cardshop.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -34,6 +34,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+
+import gr.uth.cardshop.R;
 import gr.uth.cardshop.domain.Items;
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -45,8 +47,8 @@ import okhttp3.Response;
 
 public class CheckoutActivity extends AppCompatActivity {
     // 10.0.2.2 is the Android emulator's alias to localhost
-    //private static final String BACKEND_URL = "http://10.0.2.2:5001/";//Localhost backend
-    private static final String BACKEND_URL = "https://enter-your-own-backend.herokuapp.com/"; //Heroku backend
+    private static final String BACKEND_URL = "http://10.0.2.2:5001/";//Localhost backend
+    //private static final String BACKEND_URL = "https://stripe-payment-backend.herokuapp.com/"; //Heroku backend
     private OkHttpClient httpClient = new OkHttpClient();
     private String paymentIntentClientSecret;
     private Stripe stripe;
@@ -59,7 +61,7 @@ public class CheckoutActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseFirestore mStore;
     private ArrayList<Items> itemsList;
-    LoadingDialog loadingDialog = new LoadingDialog(CheckoutActivity.this);
+    LoadingDialogActivity loadingDialog = new LoadingDialogActivity(CheckoutActivity.this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,7 +79,7 @@ public class CheckoutActivity extends AppCompatActivity {
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("Checkout");
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        stripe = new Stripe(getApplicationContext(),Objects.requireNonNull("Enter your own Publishable Key"));
+        stripe = new Stripe(getApplicationContext(),Objects.requireNonNull("pk_test_51LtBusLWr7TnFjBIztpEPkVVsntRHPUfQO69IAvc0ODxixGIhF12OTQk57mKCwpamWMyumFMyOsCKqq4g3zJPzmc00wiE9yfVi"));
         startCheckout();
     }
 

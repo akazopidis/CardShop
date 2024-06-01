@@ -1,4 +1,4 @@
-package gr.uth.cardshop;
+package gr.uth.cardshop.activities;
 
 
 import static android.content.ContentValues.TAG;
@@ -11,7 +11,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -31,6 +30,9 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
+import gr.uth.cardshop.R;
+import gr.uth.cardshop.forms.ValidationForm;
+
 public class RegisterActivity extends AppCompatActivity {
     private EditText mFullName;
     private EditText mEmail;
@@ -42,7 +44,7 @@ public class RegisterActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private MaterialToolbar mToolbar;
     private FirebaseFirestore mStore;
-    final LoadingDialog loadingDialog = new LoadingDialog(RegisterActivity.this);
+    final LoadingDialogActivity loadingDialog = new LoadingDialogActivity(RegisterActivity.this);
     ValidationForm val = new ValidationForm();
 
     @Override

@@ -1,4 +1,4 @@
-package gr.uth.cardshop;
+package gr.uth.cardshop.activities;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -29,6 +29,9 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
+
+import gr.uth.cardshop.R;
+import gr.uth.cardshop.forms.ValidationForm;
 
 public class UsersProfileActivity extends AppCompatActivity {
     private TextView fullName,email,phone,verifyMsg;

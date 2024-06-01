@@ -19,9 +19,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-import gr.uth.cardshop.DetailActivity;
-import gr.uth.cardshop.HomeActivity;
-import gr.uth.cardshop.ItemsActivity;
+import gr.uth.cardshop.activities.ItemsActivity;
 import gr.uth.cardshop.R;
 import gr.uth.cardshop.adapter.BestSellAdapter;
 import gr.uth.cardshop.adapter.CategoryAdapter;

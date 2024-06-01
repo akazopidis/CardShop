@@ -1,14 +1,14 @@
-package gr.uth.cardshop;
+package gr.uth.cardshop.forms;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ValidationForm {
 
-    ValidationForm(){
+    public ValidationForm(){
     }
 
-    boolean isValidFullName(final String name) {
+    public boolean isValidFullName(final String name) {
         Pattern pattern;
         Matcher matcher;
         final String checkName = "^(?=.{1,20}$)[A-Za-z]+(?:\\s[A-Za-z]+)*$";
@@ -17,7 +17,7 @@ public class ValidationForm {
         matcher = pattern.matcher(name);
         return matcher.matches();
     }
-    boolean isValidEmail(final String email) {
+    public boolean isValidEmail(final String email) {
         Pattern pattern;
         Matcher matcher;
         final String checkEmail = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$";
@@ -26,7 +26,7 @@ public class ValidationForm {
         matcher = pattern.matcher(email);
         return matcher.matches();
     }
-    boolean isValidPassword(final String password) {
+    public boolean isValidPassword(final String password) {
 
         Pattern pattern;
         Matcher matcher;
@@ -36,7 +36,7 @@ public class ValidationForm {
         matcher = pattern.matcher(password);
         return matcher.matches();
     }
-    boolean isValidPhone(final String phone) {
+    public boolean isValidPhone(final String phone) {
         Pattern pattern;
         Matcher matcher;
         final String checkPhone = "^\\d{10}$";
@@ -45,7 +45,7 @@ public class ValidationForm {
         matcher = pattern.matcher(phone);
         return matcher.matches();
     }
-    boolean isValidAddress(final String address) {
+    public boolean isValidAddress(final String address) {
         Pattern pattern;
         Matcher matcher;
         final String checkAddress = "^[a-zA-Z0-9 ]{1,40}$";
@@ -54,7 +54,7 @@ public class ValidationForm {
         matcher = pattern.matcher(address);
         return matcher.matches();
     }
-    boolean isValidPostalCode(final String postalCode) {
+    public boolean isValidPostalCode(final String postalCode) {
         Pattern pattern;
         Matcher matcher;
         final String checkPostalCode = "^\\d{5}$";
@@ -63,7 +63,7 @@ public class ValidationForm {
         matcher = pattern.matcher(postalCode);
         return matcher.matches();
     }
-    boolean isValidCountry(final String country) {
+    public boolean isValidCountry(final String country) {
         Pattern pattern;
         Matcher matcher;
         final String checkCountry = "^[a-zA-Z]{1,40}$";
@@ -72,7 +72,7 @@ public class ValidationForm {
         matcher = pattern.matcher(country);
         return matcher.matches();
     }
-    boolean isValidCity(final String city) {
+    public boolean isValidCity(final String city) {
         Pattern pattern;
         Matcher matcher;
         final String checkCity = "^[a-zA-Z]{1,40}$";

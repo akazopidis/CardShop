@@ -1,4 +1,4 @@
-package gr.uth.cardshop;
+package gr.uth.cardshop.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,14 +8,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -29,7 +27,8 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-import gr.uth.cardshop.adapter.ItemsRecyclerAdapter;
+import gr.uth.cardshop.R;
+import gr.uth.cardshop.adapter.ItemsAdapter;
 import gr.uth.cardshop.domain.Items;
 import gr.uth.cardshop.fragment.HomeFragment;
 
@@ -41,7 +40,7 @@ public class HomeActivity extends AppCompatActivity {
     private FirebaseFirestore mStore;
     private List<Items> mItemsList;
     private RecyclerView mItemRecyclerView;
-    private ItemsRecyclerAdapter itemsRecyclerAdapter;
+    private ItemsAdapter itemsRecyclerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +56,7 @@ public class HomeActivity extends AppCompatActivity {
         mItemsList = new ArrayList<>();
         mItemRecyclerView = findViewById(R.id.search_recycler);
         mItemRecyclerView.setLayoutManager(new GridLayoutManager(this,2));
-        itemsRecyclerAdapter = new ItemsRecyclerAdapter(this,mItemsList);
+        itemsRecyclerAdapter = new ItemsAdapter(this,mItemsList);
         mItemRecyclerView.setAdapter(itemsRecyclerAdapter);
 
         mSearchText.addTextChangedListener(new TextWatcher() {
@@ -93,7 +92,7 @@ public class HomeActivity extends AppCompatActivity {
                                         items.setDocId(doc.getId());
                                     }
                                 }
-                                itemsRecyclerAdapter = new ItemsRecyclerAdapter(HomeActivity.this.getApplicationContext(), mItemsList);
+                                itemsRecyclerAdapter = new ItemsAdapter(HomeActivity.this.getApplicationContext(), mItemsList);
                                 mItemRecyclerView.setAdapter(itemsRecyclerAdapter);
                                 mItemRecyclerView.setVisibility(View.VISIBLE);
                             }
@@ -101,7 +100,7 @@ public class HomeActivity extends AppCompatActivity {
                     });
         }else{
             mItemsList.clear();
-            itemsRecyclerAdapter = new ItemsRecyclerAdapter(getApplicationContext(),new ArrayList<>());
+            itemsRecyclerAdapter = new ItemsAdapter(getApplicationContext(),new ArrayList<>());
             mItemRecyclerView.setAdapter(itemsRecyclerAdapter);
             itemsRecyclerAdapter.notifyDataSetChanged();
             mItemRecyclerView.setVisibility(View.GONE);

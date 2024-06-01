@@ -1,4 +1,4 @@
-package gr.uth.cardshop;
+package gr.uth.cardshop.activities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -35,6 +35,9 @@ import com.squareup.picasso.Picasso;
 import java.util.HashMap;
 import java.util.Map;
 
+import gr.uth.cardshop.R;
+import gr.uth.cardshop.forms.ValidationForm;
+
 public class EditProfileActivity extends AppCompatActivity {
 
     public static final  String TAG = "TAG";
@@ -46,7 +49,7 @@ public class EditProfileActivity extends AppCompatActivity {
     private FirebaseUser user;
     private StorageReference storageReference;
     private MaterialToolbar mToolbar;
-    LoadingDialog loadingDialog = new LoadingDialog(EditProfileActivity.this);
+    LoadingDialogActivity loadingDialog = new LoadingDialogActivity(EditProfileActivity.this);
     ValidationForm vf = new ValidationForm();
 
     @Override
