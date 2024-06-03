@@ -51,6 +51,8 @@ Authentication Templates Email address verification
 
 ![image](https://github.com/akazopidis/CardShop/assets/70575515/d7e3ebfc-1991-4420-8d74-a1896c210db1)
 
+![image](https://github.com/akazopidis/CardShop/assets/70575515/1128abec-99e7-43bc-ade0-384594b77048)
+
 Authentication Templates Password reset
 ![image](https://github.com/akazopidis/CardShop/assets/70575515/eabf4922-f423-4281-aaec-81b5978f16bf)
 
