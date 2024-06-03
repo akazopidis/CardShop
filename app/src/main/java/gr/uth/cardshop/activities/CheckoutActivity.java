@@ -79,7 +79,7 @@ public class CheckoutActivity extends AppCompatActivity {
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("Checkout");
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        stripe = new Stripe(getApplicationContext(),Objects.requireNonNull("pk_test_51LtBusLWr7TnFjBIztpEPkVVsntRHPUfQO69IAvc0ODxixGIhF12OTQk57mKCwpamWMyumFMyOsCKqq4g3zJPzmc00wiE9yfVi"));
+        stripe = new Stripe(getApplicationContext(),Objects.requireNonNull("Enter your own publishable key"));
         startCheckout();
     }
 
