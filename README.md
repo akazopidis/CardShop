@@ -49,6 +49,8 @@ Authentication Sign-in method
 Authentication Templates Email address verification
 ![image](https://github.com/akazopidis/CardShop/assets/70575515/7304b22d-cb8e-4f3f-bb5b-753dae1c3e82)
 
+![image](https://github.com/akazopidis/CardShop/assets/70575515/5b2c79c0-f505-4df6-8f3f-4f44461f1111)
+
 Authentication Templates Password reset
 ![image](https://github.com/akazopidis/CardShop/assets/70575515/eabf4922-f423-4281-aaec-81b5978f16bf)
 
