@@ -37,3 +37,59 @@ Subcollection Orders
 
 Subcollection Wishlist
 ![image](https://github.com/akazopidis/CardShop/assets/70575515/0d826546-ce7c-4476-b609-e4082bf42c3a)
+
+**Firebase Authentication**
+
+Users Authentication
+![image](https://github.com/akazopidis/CardShop/assets/70575515/7540e796-5b14-4387-a637-3d19ce2d4277)
+
+Authentication Sign-in method
+![image](https://github.com/akazopidis/CardShop/assets/70575515/9df5a513-de01-45c1-92b5-14128ad1b391)
+
+Authentication Templates Email address verification
+![image](https://github.com/akazopidis/CardShop/assets/70575515/7304b22d-cb8e-4f3f-bb5b-753dae1c3e82)
+
+![image](https://github.com/akazopidis/CardShop/assets/70575515/5b2c79c0-f505-4df6-8f3f-4f44461f1111)
+
+Authentication Templates Password reset
+![image](https://github.com/akazopidis/CardShop/assets/70575515/eabf4922-f423-4281-aaec-81b5978f16bf)
+
+![image](https://github.com/akazopidis/CardShop/assets/70575515/a568ed23-7c72-486c-8f70-6800833f9956)
+
+**Storage**
+
+Storage Files
+![image](https://github.com/akazopidis/CardShop/assets/70575515/2c41f9ed-7e08-4e80-a844-16853888e831)
+
+BestSellImages Folder
+![image](https://github.com/akazopidis/CardShop/assets/70575515/a3e4db90-e080-4e61-ae55-1fa836998b41)
+
+CategoryImages Folder
+![image](https://github.com/akazopidis/CardShop/assets/70575515/6a9c6243-e7cd-4586-8ebb-8cfcc9fe349a)
+
+FeatureImages Folder
+![image](https://github.com/akazopidis/CardShop/assets/70575515/bbc7cb08-906f-40dd-9a38-9783caa13540)
+
+StockImages Folder
+![image](https://github.com/akazopidis/CardShop/assets/70575515/8d95774f-e417-4e4d-b7ec-2b58b03628fb)
+
+Users Folder
+![image](https://github.com/akazopidis/CardShop/assets/70575515/31de1911-5b0c-43ce-be55-852746e85ae4)
+
+UserProfile Image
+![image](https://github.com/akazopidis/CardShop/assets/70575515/ddbc9e18-477c-453b-9a3a-f44e00af7139)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
