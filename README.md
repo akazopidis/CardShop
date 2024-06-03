@@ -3,7 +3,7 @@
 **App overview designed using Figma**
 ![UI_UX_v2](https://github.com/Apostolos-Kazopidis/CardShop/assets/70575515/573ead08-3126-448a-a3be-85d48217adb2)
 
-**Firebase Database**
+**Firebase Firestore Database**
 
 Collection BestSell
 ![image](https://github.com/akazopidis/CardShop/assets/70575515/9904cbc8-c9ce-4b52-bc9b-44768793cf33)
